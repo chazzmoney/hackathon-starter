@@ -4,13 +4,14 @@
   "description": "A boilerplate for Node.js web applications",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
+    "url": "https://github.com/chazzmoney/hackathon-starter.git"
   },
   "author": "Sahat Yalkabov",
   "license": "MIT",
   "scripts": {
     "postinstall": "cp node_modules/popper.js/dist/popper.min.* public/js/lib && cp node_modules/bootstrap/dist/js/bootstrap.min.* public/js/lib && cp node_modules/jquery/dist/jquery.min.* public/js/lib && npm rebuild node-sass",
     "start": "node app.js",
+    "dev": "nodemon app.js | ngrok http 8080",
     "test": "nyc mocha --timeout=3000 --exit",
     "lint": "eslint **/*.js"
   },
